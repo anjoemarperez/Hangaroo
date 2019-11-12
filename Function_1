@@ -1,5 +1,5 @@
 def isWordGuessed (secretWord, lettersGuessed):
-    secretWord = input('korea')
+    secretWord = "korea"
     lettersGuessed = ['k','o','r','e','a']
     word = list(lettersGuessed)
     for lettersGuessed in word:
