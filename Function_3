@@ -1,0 +1,13 @@
+def getAvailableLetters (lettersGuessed):
+    secretWord = "korea"
+    lettersGuessed = ['j','k','p','e','m']
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    A = [x.lower() for x in lettersGuessed]
+    B = list(alphabet)
+    C = set(B)
+    D = set(A)
+    E = C - D
+    F = list(E)
+    G = sorted(F)
+    
+    print(G)
