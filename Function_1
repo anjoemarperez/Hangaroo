@@ -1,0 +1,9 @@
+def isWordGuessed (secretWord, lettersGuessed):
+    secretWord = input('korea')
+    lettersGuessed = ['k','o','r','e','a']
+    word = list(lettersGuessed)
+    for lettersGuessed in word:
+        if lettersGuessed in secretWord:
+            return True
+        else:
+            return False
