@@ -1,0 +1,9 @@
+def getGuessedWord (secretWord, lettersGuessed):
+    secretWord = "korea"
+    lettersGuessed = ['j','k','e','p','m','s']
+    word = list(secretWord)
+    for i in word:
+        if i in lettersGuessed:
+            print (i , end = '')
+        else:
+                print ('_' , end = '')
