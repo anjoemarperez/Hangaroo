@@ -1,0 +1,46 @@
+secretWord = 0
+def Hangaroo(secretWord):
+    print("Input secret Word")
+    secretWord = input()
+    secretWord = secretWord.lower()
+    secretWord = list(secretWord)
+    chances = 5
+    print ("You have 5 total chances to guess")
+    lettersGuessed = []
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    A = [x.lower() for x in lettersGuessed]
+    B = list(alphabet)
+
+    while (chances <= 5):
+        print ("Type the letter of your choice as guess!")
+        x = list(input())
+        lettersGuessed.extend(x)
+        for i in secretWord:
+            if i in lettersGuessed:
+                print (i, end = '')
+        else:
+                print ('_',end = '')
+        print ("These are the remaining letters")
+    A = [x.lower() for x in lettersGuessed]
+    B = list(alphabet)
+    C = set(B)
+    D = set(A)
+    E = C - D
+    F = list(E)
+    G = sorted(F)
+    
+    print(G)
+    
+    if len(x) > 1:
+            print ("Only one letter is allowed!")
+            return Hangaroo (secretWord)
+    if isWordGuessed(secretWord,lettersGuessed) == True:
+            print("You are correct")
+    else:
+            chances - 1
+    if all(el in lettersGuessed  for el in secretWord) == True:
+            print("Congratulations! You guessed the correct word!")
+            return Hangaroo(secretWord)
+    
+    if chances == 0:
+        print("Sorry you lost! say goodbye to hangaroo!")
